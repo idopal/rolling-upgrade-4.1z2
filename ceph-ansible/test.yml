@@ -1,4 +1,9 @@
----
-  tasks:
-  - name: echo server name
-    shell: ip a
+- name: Create project
+  oc:
+    state: present
+    inline:
+      kind: ProjectRequest
+      metadata:
+        name: ido
+      displayName: Ansible Test Project
+      description: This project was created using Ansible
