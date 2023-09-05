@@ -1,4 +1,4 @@
 ---
   tasks:
   - name: echo server name
-    shell: hostnamectl
+    shell: ip a
