@@ -1,16 +1,4 @@
 ---
-- hosts: localhost
-  become: true
   tasks:
-  - import_role:
-      name: ceph-common
-  - import_role:
-      name: ceph-mon
-  - import_role:
-      name: ceph-osd
-  - import_role:
-      name: ceph-mds
-  - import_role:
-      name: ceph-rgw
-  - import_role:
-      name: ceph-fetch-keys
+  - name: echo server name
+    shell: hostnamectl
